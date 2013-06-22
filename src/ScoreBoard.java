@@ -16,6 +16,10 @@ public class ScoreBoard implements Spectator {
         System.out.println(this.toString());
     }
 
+    public void displayScore(){
+        System.out.println(this.toString());
+    }
+
     public String toString() {
         String result = "";
         for (String team : scores.keySet()) {

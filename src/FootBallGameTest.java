@@ -7,12 +7,15 @@ public class FootBallGameTest {
         FootballGame game = new FootballGame();
 
         game.enter(new Reporter());
-        game.enter(new ScoreBoard(teamA, teamB));
+        ScoreBoard scoreBoard = new ScoreBoard(teamA, teamB);
+        game.enter(scoreBoard);
         game.enter(new Fan(teamA));
         game.enter(new GrumpyFan(teamA));
         game.enter(new Fan(teamB));
 
+        scoreBoard.displayScore();
         game.goalFor(teamA);
         game.goalFor(teamB);
+
     }
 }
