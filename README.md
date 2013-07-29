@@ -35,6 +35,7 @@ Let them start working on this in pairs. Stop after 5 minutes and discuss.
  * What are the classes. What methods do they have. Return types? Parameters?
  * We want the reporter to actually DO stuff not just return messages -> system out and return void
  * How do we test these classes?
+ (If required, give them ConsoleStreamTest to use so that they can focus on Obj Interactions more)
  
 hack... hack... hack...
  
