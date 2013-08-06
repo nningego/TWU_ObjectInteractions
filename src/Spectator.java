@@ -1,5 +1,5 @@
 public interface Spectator {
 
-    public void reactToGoalFor(String scoringTeam);
+    public String reactToGoalFor(Team scoringTeam);
 
 }

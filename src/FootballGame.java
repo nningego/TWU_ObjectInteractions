@@ -9,10 +9,13 @@ public class FootballGame {
         spectators = new ArrayList<Spectator>();
     }
 
-    public void goalFor(String scoringTeam) {
+    public String goalFor(Team scoringTeam) {
+        StringBuilder responses = new StringBuilder();
         for (Spectator spectator : spectators) {
-            spectator.reactToGoalFor(scoringTeam);
+            responses.append(spectator.reactToGoalFor(scoringTeam));
+            responses.append("\n");
         }
+        return responses.toString();
     }
 
     public void enter(Spectator observer) {

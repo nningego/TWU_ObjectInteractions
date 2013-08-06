@@ -18,7 +18,7 @@ We want to model a football match. Put index with the desired components on the 
  * Spectator
  * Fan
  * Score Board
- * Gumpy Fan
+ * Grumpy Fan
 
 ## First Step - a reporter watches a football match
 
@@ -34,9 +34,8 @@ Start with "Football Game" and "Reporter". Have a discussion around the design.
 Let them start working on this in pairs. Stop after 5 minutes and discuss.
  * What are the classes. What methods do they have. Return types? Parameters?
  * We want the reporter to actually DO stuff not just return messages -> system out and return void
- * How do we test these classes?
- (If required, give them ConsoleStreamTest to use so that they can focus on Obj Interactions more)
- 
+ * How do we test these classes? [just return strings for now]
+
 hack... hack... hack...
  
  
@@ -51,7 +50,7 @@ Introduce a fan and have a short design discussion.
  
 hack... hack... hack...
 
-Let on pair present a good solution.
+Let one pair present a good solution.
 
 
 ## Third step - score board and a grumpy fan
@@ -60,7 +59,7 @@ Introduce the remaining components and have a short design discussion
  * A score board keep track of the goals
  * every time a goal happen it will print out the current score
  * You can ask the score board for the current score at any time
- * A grumpy fan says "meh!" when his team score
+ * A grumpy fan says "meh!" when his and the other team scores
  * Can we inherit from the normal fan?
  
 hack... hack... hack...

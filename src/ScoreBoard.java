@@ -1,35 +1,36 @@
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class ScoreBoard implements Spectator {
 
-    private HashMap<String, Integer> scores = new HashMap<String, Integer>();
+    private LinkedHashMap<Team, Integer> scores =  new LinkedHashMap<Team, Integer>();
 
-    public ScoreBoard(String... teams) {
-        for (String team : teams) {
+    public ScoreBoard(Team... teams) {
+        for (Team team : teams) {
             scores.put(team, 0);
         }
     }
 
     @Override
-    public void reactToGoalFor(String scoringTeam) {
+    public String reactToGoalFor(Team scoringTeam) {
         updateScore(scoringTeam);
-        System.out.println(this.toString());
+        return  this.toString();
     }
 
-    public void displayScore(){
-        System.out.println(this.toString());
+    private void updateScore(Team scoringTeam) {
+        Integer score = scores.get(scoringTeam);
+        scores.put(scoringTeam, score+1);
     }
 
+    @Override
     public String toString() {
-        String result = "";
-        for (String team : scores.keySet()) {
-
-            result += team + ": " + scores.get(team) + " ";
+        StringBuilder displayMessage = new StringBuilder();
+        displayMessage.append("SCORES =>");
+        for (Team team : scores.keySet()) {
+            displayMessage.append(" ");
+            displayMessage.append(team.toString());
+            displayMessage.append(" (").append(scores.get(team)).append(")");
         }
-        return result;
+        return displayMessage.toString();
     }
 
-    private void updateScore(String scoringTeam) {
-        scores.put(scoringTeam, scores.get(scoringTeam) + 1);
-    }
 }

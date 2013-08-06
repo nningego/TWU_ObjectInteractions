@@ -1,15 +1,17 @@
 public class GrumpyFan extends Fan {
-    public GrumpyFan(String teamA) {
-        super(teamA);
+    public GrumpyFan(Team team) {
+        super(team);
     }
 
     @Override
     protected String weAreScoringMsg() {
-        return "... meh.";
+        return "... Meh...";
     }
 
     @Override
-    public String toString() {
-        return "Grumpy " + super.toString();
+    protected String theyAreScoringMsg() {
+        return "... Meh...";
     }
+
+
 }

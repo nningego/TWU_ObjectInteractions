@@ -1,15 +1,15 @@
 public class Fan implements Spectator {
-    private String team;
+    private Team team;
 
-    public Fan(String team) {
+    public Fan(Team team) {
         this.team = team;
     }
 
-    public void reactToGoalFor(String scoringTeam) {
-        if (scoringTeam.contains(team)) {
-            System.out.println(this.toString() + weAreScoringMsg());
+    public String reactToGoalFor(Team scoringTeam) {
+        if (scoringTeam.equals(team)) {
+            return  this.toString() + weAreScoringMsg();
         } else {
-            System.out.println(this.toString() + theyAreScoringMsg());
+            return  this.toString() + theyAreScoringMsg();
         }
     }
 

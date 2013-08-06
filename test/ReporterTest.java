@@ -1,15 +1,15 @@
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
 
-public class ReporterTest extends ConsoleStreamTest {
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
+public class ReporterTest {
 
     @Test
     public void shouldReportTheScore(){
         Reporter reporter = new Reporter();
-        String scoringTeam = "A";
-        reporter.reactToGoalFor(scoringTeam);
-
-        assertEquals("Reporter: GOOOOOOOAL ... " + scoringTeam + " scored!\n", getOutContent().toString());
+        Team scoringTeam = Team.A;
+        assertThat(reporter.reactToGoalFor(scoringTeam), is("Reporter: GOOOOOOOAL ... " + scoringTeam + " scored!"));
     }
 
 

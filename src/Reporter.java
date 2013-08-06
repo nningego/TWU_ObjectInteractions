@@ -1,7 +1,7 @@
-public class Reporter implements Spectator {
+public class Reporter  implements Spectator{
 
-    public void reactToGoalFor(String scoringTeam) {
-        System.out.println("Reporter: GOOOOOOOAL ... " + scoringTeam + " scored!");
+    public String reactToGoalFor(Team scoringTeam) {
+        return "Reporter: GOOOOOOOAL ... " + scoringTeam + " scored!";
     }
 
 }
